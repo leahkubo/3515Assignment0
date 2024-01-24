@@ -10,7 +10,7 @@ fun main() {
 
     circle = Circle("circle")
     square = Square("square")
-    triangle = Triangle("triangle")
+
 
     print("Enter radius of circle: ")
     input1 = readln()
@@ -23,10 +23,12 @@ fun main() {
     print("Is your triangle Equilateral? Y/N: ")
     input3 = readln()
     if (input3.uppercase() == "Y" || input3.uppercase() == "YES"){
+        triangle = EquiTriangle("equilateral triangle")
         print("Enter side length: ")
         input1 = readln()
         triangle.setDimensions(input1.toDouble())
     } else {
+        triangle = Triangle("triangle")
         print("Enter side length 1: ")
         input1 = readln()
         print("Enter side length 2: ")

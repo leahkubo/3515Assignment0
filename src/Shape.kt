@@ -69,9 +69,26 @@ class Triangle(_name : String) : Shape(_name){
         side2 = _side2
         side3 = _side3
     }
+}
+
+class EquiTriangle(_name: String) : Shape(_name){
+
     fun setDimensions(side : Double){
         side1 = side
         side2 = side
         side3 = side
+    }
+    private var side1 = 0.0
+    private var side2 = 0.0
+    private var side3 = 0.0
+    override fun printDimensions() {
+        println("Side 1: $side1")
+        println("Side 2: $side2")
+        println("Side 3: $side3")
+        println("Area: ${this.getArea()}")
+    }
+    override fun getArea() : Double{
+        val s = (side1 + side2 + side3) / 2
+        return sqrt((s * (s-side1) * (s-side2) * (s-side3)))
     }
 }
