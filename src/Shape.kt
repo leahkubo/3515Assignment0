@@ -48,7 +48,7 @@ class Circle(_name : String) : Shape(_name){
 }
 
 
-class Triangle(_name : String) : Shape(_name){
+open class Triangle(_name : String) : Shape(_name){
 
     private var side1 = 0.0
     private var side2 = 0.0
@@ -71,7 +71,7 @@ class Triangle(_name : String) : Shape(_name){
     }
 }
 
-class EquiTriangle(_name: String) : Shape(_name){
+class EquiTriangle(_name: String) : Triangle(_name){
 
     fun setDimensions(side : Double){
         side1 = side
